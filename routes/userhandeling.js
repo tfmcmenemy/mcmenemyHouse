@@ -226,7 +226,7 @@ router.post("/registrationlink", checkAuth, async (req, res) => {
   // Validate the email format
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    return res.render("sendRegistrationLink", {
+    return res.render("sendregistrationlink", {
       title: "Registration Link",
       message: "Invalid email format",
       registrationLink: "",
