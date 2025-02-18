@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- <script src="/js/home.js" defer></script> -->
+    <title>McMenemy | <%= title %>
+    </title>
+    <style>
+        .alert {
+            padding: 15px;
+            background-color: #05d925;
+            color: white;
+            margin-bottom: 15px;
+            border-radius: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Registration Link</h2>
+        <% if (message) { %>
+            <div class="alert" id="alert-message">
+                <%= message %>
+            </div>
+            <% } %>
+                <% if (!registrationLink) { %>
+                    <form method="POST" action="/registrationlink">
+                        <div class="input-group">
+                            <input type="text" id="email" name="email" placeholder="email" required>
+                        </div>
+                        <div class="input-group">
+                            <button type="submit" class="login-button">Send Link</button>
+                        </div>
+                    </form>
+                    <% } %>
+                        <% if (registrationLink) { %>
+                            <div class="input-group">
+                                <input type="text" id="registration-link" value="<%= registrationLink %>" readonly>
+                            </div>
+                            <div class="input-group">
+                                <button type="button" class="login-button" onclick="copyToClipboard()">Copy
+                                    Link</button>
+                            </div>
+                            <% } %>
+
+                                <script>
+                                    function copyToClipboard() {
+                                        var copyText = document.getElementById("registration-link");
+                                        copyText.select();
+                                        copyText.setSelectionRange(0, 99999); // For mobile devices
+                                        document.execCommand("copy");
+                                        window.location.href = '/';
+                                    }
+                                </script>
+    </div>
+    <script>
+        window.onload = function () {
+            var alertMessage = document.getElementById('alert-message');
+            if (alertMessage) {
+                setTimeout(function () {
+                    alertMessage.style.display = 'none';
+                }, 3000);
+            }
+        };
+    </script>
+    <%- include('partials/footer') %>

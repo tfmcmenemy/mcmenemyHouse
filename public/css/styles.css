@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #141e30, #243b55);
+}
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+.login-container h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.login-button:hover {
+  background: #45a049;
+}
+.forgot-password > a {
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+.forgot-password:hover {
+  text-decoration: underline;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #141e30, #243b55);
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  margin-bottom: 80px;
+}
+
+.content h2 {
+  color: white;
+}
+
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 0;
+  backdrop-filter: blur(10px);
+}
+
+.menu-item {
+  position: relative;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.menu-item svg {
+  width: 24px;
+  height: 24px;
+  /* fill: white; */
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item.active svg {
+  transform: scale(1.2);
+  /* fill: #00d4ff; */
+}
+
+.menu-item.active {
+  transform: translateY(-5px);
+  font-weight: bold;
+}
+.button:hover {
+  cursor: pointer;
+}

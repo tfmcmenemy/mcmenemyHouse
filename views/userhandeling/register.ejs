@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/register.js" defer></script>
+    <title>McMenemy | <%= title %>
+    </title>
+    <style>
+        .alert {
+            display: none;
+            background-color: red;
+            color: white;
+            padding: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+            border-radius: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Register</h2>
+        <% if (typeof message !=='undefined' ) { %>
+            <div class="alert" id="alertMessage">
+                <%= message %>
+            </div>
+            <% } %>
+                <form action="/register" method="POST" id="registerForm">
+                    <input type="hidden" id="registrationCode" name="registrationCode" value="<%= registrationCode %>">
+                    <div class="input-group">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Password"
+                            required>
+                    </div>
+                    <button type="submit" id="submitButton" class="login-button">Register</button>
+                </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const alertMessage = document.getElementById('alertMessage');
+            if (alertMessage) {
+                alertMessage.style.display = 'block';
+                setTimeout(() => {
+                    alertMessage.style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+
+</html>
