@@ -70,7 +70,7 @@ router.get("/logout", (req, res) => {
 });
 
 router.get("/registrationlink", checkAuth, async (req, res) => {
-  res.render("sendRegistrationLink", {
+  res.render("sendregistrationlink", {
     title: "Registration Link",
     message: "",
     registrationLink: "",
