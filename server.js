@@ -30,6 +30,10 @@ app.use(
 // Routes
 app.use("/", userhandelingroutes);
 
+app.use((req, res, next) => {
+  res.status(404).render("unknownpage", { title: "Unknown Page" });
+});
+
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });

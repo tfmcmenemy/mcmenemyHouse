@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/login.js" defer></script>
+    <title>McMenemy | <%= title %>
+    </title>
+    <style>
+        .alert {
+            padding: 15px;
+            background-color: #f44336;
+            /* Red */
+            color: white;
+            margin-bottom: 15px;
+            border-radius: 34px;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        h3,
+        h3>a {
+            color: white;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>The page you are looking for doe not exist.</h2>
+    <h3><a href="/">Return to Home</a></h3>
+    <script>
+        window.onload = function () {
+            var alertMessage = document.getElementById('alert-message');
+            if (alertMessage) {
+                setTimeout(function () {
+                    alertMessage.style.display = 'none';
+                }, 5000);
+            }
+        };
+    </script>
+</body>
+
+</html>
