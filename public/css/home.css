@@ -56,15 +56,3 @@ body {
   /* fill: white; */
   transition: transform 0.3s ease-in-out;
 }
-
-.menu-item.active svg {
-  transform: scale(1.5);
-  color: #4caf50;
-
-  /* fill: #00d4ff; */
-}
-
-.menu-item.active {
-  transform: translateY(-5px);
-  font-weight: bold;
-}

@@ -217,7 +217,7 @@ router.post("/login", async (req, res) => {
   // Authenticate the user and set the session
   req.session.user = user;
 
-  res.redirect("/");
+  res.redirect("/home");
 });
 
 router.post("/registrationlink", checkAuth, async (req, res) => {

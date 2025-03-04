@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McMenemy | <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #141E30, #243B55);
+            padding-bottom: 60px;
+        }
+
+
+        .pw-manager {
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+
+            .main-title {
+                position: fixed;
+                z-index: 1000;
+                text-align: center;
+                background: linear-gradient(to right, #3a6073, #16222a);
+                color: whitesmoke;
+                font-size: 2rem;
+                padding: 10px;
+                width: 100%;
+                height: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .pw-main {
+                position: absolute;
+                top: 8rem;
+                left: 0;
+                right: 0;
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100vw;
+                height: 100vh;
+
+                padding-bottom: 10rem;
+            }
+
+            .item-box {
+                display: flex;
+                justify-content: center;
+                color: whitesmoke;
+                align-items: center;
+                width: 120px;
+                height: 80px;
+                border-radius: 10px;
+                margin: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-align: center;
+
+                background: rgba(255, 255, 255, 0.1);
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                word-break: break-word;
+                white-space: normal;
+                font-size: 12px;
+
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                &.add-item {
+                    background: #4caf50;
+                    color: whitesmoke;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+                    width: 100vw;
+                    height: 4rem;
+                }
+            }
+        }
+
+
+
+        .menu-item.pws svg {
+            transform: scale(1.5);
+            color: #4caf50;
+
+            /* fill: #00d4ff; */
+        }
+
+        .menu-item.pws {
+            transform: translateY(-5px);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pw-manager">
+        <div class="main-title">Credential List</div>
+        <div class="pw-main">
+            <div class="item-box">
+                Google
+            </div>
+            <div class="item-box">
+                Facebook
+            </div>
+            <div class="item-box">
+                Peacock
+            </div>
+            <div class="item-box">
+                Apple
+            </div>
+            <div class="item-box">
+                this is to test if there is a long statement
+            </div>
+            <div class="item-box">
+                Hulu
+            </div>
+            <div class="item-box">
+                Google
+            </div>
+            <div class="item-box">
+                Facebook
+            </div>
+            <div class="item-box">
+                Peacock
+            </div>
+
+            <div class="item-box">
+                Something else
+            </div>
+            <div class="item-box">
+                Hulu
+            </div>
+            <div class="item-box">
+                Google
+            </div>
+            <div class="item-box">
+                Facebook
+            </div>
+            <div class="item-box">
+                Peacock
+            </div>
+            <div class="item-box">
+                Apple
+            </div>
+            <div class="item-box">
+                Something else
+            </div>
+            <div class="item-box">
+                Hulu
+            </div>
+            <div class="item-box add-item">Add a new item</div>
+
+        </div>
+    </div>
+
+    <!-- <label for="username" class="item-label">Username</label>
+    <input type="text" id="username"> -->
+
+    <script>
+
+    </script>
+    <%- include('../partials/footer') %>

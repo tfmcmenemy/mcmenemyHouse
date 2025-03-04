@@ -18,6 +18,19 @@
             border-radius: 34px;
         }
 
+        .main-message {
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            /* padding-bottom: 600px; */
+            text-align: center;
+            padding: 30px;
+        }
+
         h2 {
             color: white;
         }
@@ -32,8 +45,12 @@
 </head>
 
 <body>
-    <h2>The page you are looking for doe not exist.</h2>
-    <h3><a href="/">Return to Home</a></h3>
+    <div class="main-message">
+
+        <h2>The page you are looking for doe not exist.</h2>
+        <h3><a href="/">Return to Home</a></h3>
+
+    </div>
     <script>
         window.onload = function () {
             var alertMessage = document.getElementById('alert-message');

@@ -4,6 +4,7 @@ const path = require("path");
 const db = require("./config/db");
 const session = require("express-session");
 const userhandelingroutes = require("./routes/userhandeling");
+const modules = require("./routes/modules");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -29,6 +30,7 @@ app.use(
 
 // Routes
 app.use("/", userhandelingroutes);
+app.use("/home", modules);
 
 app.use((req, res, next) => {
   res.status(404).render("unknownpage", { title: "Unknown Page" });
