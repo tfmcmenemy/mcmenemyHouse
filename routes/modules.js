@@ -29,4 +29,8 @@ router.get("/pws", checkAuth, async (req, res) => {
   res.render("modules/pws", { title: "Password Manager" });
 });
 
+router.get("/04122014", async (req, res) => {
+  res.render("modules/anniversary", { title: "Happy Anniversary" });
+});
+
 module.exports = router;

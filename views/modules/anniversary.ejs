@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/login.js" defer></script>
+    <title>
+        <%= title %>
+    </title>
+    <style>
+        .alert {
+            padding: 15px;
+            background-color: #f44336;
+            /* Red */
+            color: white;
+            margin-bottom: 15px;
+            border-radius: 34px;
+        }
+
+        .main-message {
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            /* padding-bottom: 600px; */
+            text-align: center;
+            padding: 30px;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        h3,
+        h3>a {
+            color: white;
+            cursor: pointer;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-message">
+
+        <h2>Happy 11th Anniversary!</h2>
+        <h3>You gift is located in the...</h3>
+
+    </div>
+    <script>
+        window.onload = function () {
+            var alertMessage = document.getElementById('alert-message');
+            if (alertMessage) {
+                setTimeout(function () {
+                    alertMessage.style.display = 'none';
+                }, 5000);
+            }
+        };
+    </script>
+</body>
+
+</html>
