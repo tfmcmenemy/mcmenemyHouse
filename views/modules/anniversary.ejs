@@ -10,6 +10,19 @@
         <%= title %>
     </title>
     <style>
+        body {
+            background-image: url('/images/Becca Tom s wedding-BT ceremony-0046.jpg');
+            background-size: cover;
+            background-position: center;
+            /* filter: blur(5px); */
+        }
+
+        .main-message {
+            position: relative;
+            z-index: 1;
+            filter: none;
+        }
+
         .alert {
             padding: 15px;
             background-color: #f44336;
@@ -26,19 +39,19 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 80vh;
+            height: 60vh;
             /* padding-bottom: 600px; */
             text-align: center;
             padding: 30px;
         }
 
         h2 {
-            color: white;
+            color: rgb(0, 0, 0);
         }
 
         h3,
         h3>a {
-            color: white;
+            color: rgb(0, 0, 0);
             cursor: pointer;
             margin-top: 2rem;
         }
@@ -47,9 +60,16 @@
 
 <body>
     <div class="main-message">
+        <div
+            style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border-radius: 15px; padding: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h2>Happy 11th Anniversary!</h2>
 
-        <h2>Happy 11th Anniversary!</h2>
-        <h3>You gift is located in the...</h3>
+            <br>
+            <h3>I cannot begin to ever explain to you how much I love you. You are my best friend, my dream come true,
+                my everything. </h3>
+            <br>
+            <h3>I have a surprise for you. It can be found where love grows. </h3>
+        </div>
 
     </div>
     <script>
